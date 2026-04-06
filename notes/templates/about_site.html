@@ -1,17 +1,15 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Notes app</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'>
     <link rel='stylesheet' href='{% static "css/styles.css" %}'>
-
+    <title>About Site</title>
 </head>
-
 <body>
-
-      <!-- Navbar -->
+    <!-- Navbar -->
        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Notelly</a>
@@ -34,24 +32,11 @@
         </div>
     </nav>
 
-    <!-- Main content -->
-    <div class='main'>
-        <div class='container'>
-            <div class="row">
-                <div class='col-md-6'>
-                    <h2 class="main-content text-center">Welcome to the Notes App!</h2>
-                    <p class="main-content text-center">This is a simple application to help you manage your notes efficiently. You can create, edit, and delete notes as needed.</p>
-                    <p class="main-content text-center">Use the navigation bar above to access different sections of the app, including your notes list and helpful resources.</p>
-                </div>            
-            </div>            
-        </div>
-    </div>
-
-
+    <h1 class="text-center">About Site</h1>
+    <p class="text-center">This is a simple Notes application built with Django. It allows users to create, edit, and manage their notes efficiently. The app provides a user-friendly interface and supports features like reminders for important notes.</p>
 
     <footer class='bg-dark text-white text-center mt-5 p-3'>
         <p class='mb-0'>&copy; Copyright 2026</p>
     </footer>
 </body>
-
 </html>

@@ -14,7 +14,8 @@ from pathlib import Path
 import os
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent 
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 
 
@@ -76,7 +77,7 @@ WSGI_APPLICATION = 'notes_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': r'C:\Users\Admin\Desktop\shedule\note-project\db.sqlite3', 
+        'NAME': r'C:\Users\Admin\Desktop\shedule\note-project\db.sqlite3',
     }
 }
 
@@ -115,8 +116,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'notes/static/'
+STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'notes/static/'),
+    os.path.join(BASE_DIR, 'static/'),
 ]   
