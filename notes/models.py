@@ -1,3 +1,4 @@
+from django.urls import reverse
 from django.utils import timezone
 from django.db import models
 
@@ -12,7 +13,9 @@ class Note(models.Model):
     class Meta:
         ordering = ['title', 'created_at']
         
-        
+    def get_absolute_url(self):
+        return reverse('note-detail', kwargs={"pk": self.pk})
+    
     
 
     
