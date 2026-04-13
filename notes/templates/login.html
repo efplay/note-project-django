@@ -1,0 +1,53 @@
+{% extends "notes.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Login</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="alert alert-info">
+                <p>Use the following credentials to log in:</p>
+                <ul>
+                    <li class="fw-bold">Username: admin</li>
+                    <li class="fw-bold">Password: admin123</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class='card-title'>Login to your account</h3>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="id_username" class="form-label">Username</label>
+                            {{ form.username }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_password" class="form-label">Password</label>
+                            {{ form.password }}
+                        </div>
+                        <button type="submit" class="btn btn-primary d-block mx-auto">Login</button>
+                    </form>
+                    {% if user.is_authenticated %}
+                        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                                <img src="..." class="rounded me-2" alt="...">
+                                <strong class="me-auto">Notelly</strong>
+                                <small>Hello,  {{ user.username }}</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                                Hello, world! This is a toast message.
+                            </div>
+                        </div>
+                        {% endif %}
+                    <div class='card text-dark bg-warning mt-3'>
+                        <div class='card-text text-center'>Don't have an account? <a class="text-dark fw-bold" href="{% url 'register' %}">Sign up</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

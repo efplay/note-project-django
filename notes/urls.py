@@ -10,4 +10,7 @@ urlpatterns = [
     path('notes/<int:pk>/', NoteDetailView.as_view(), name='note-detail'),
     path('notes/<int:pk>/update/', NoteUpdateView.as_view(), name='note-update'),
     path('notes/<int:pk>/delete/', NoteDeleteView.as_view(), name='note-delete'),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
+    path('register/', register_view, name='register'),
 ]
